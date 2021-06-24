@@ -15,7 +15,6 @@ spec:
       containers:
         - name: auth
           image: tish3185/auth
-          imagePullPolicy: Never
           env: 
             - name: MONGO_URI
               value: 'mongodb://auth-mongo-srv:27017/auth'

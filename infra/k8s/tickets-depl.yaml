@@ -15,7 +15,6 @@ spec:
       containers:
         - name: tickets
           image: tish3185/tickets
-          imagePullPolicy: Never
           env: 
             - name: NATS_CLIENT_ID
               valueFrom:
