@@ -4,10 +4,8 @@ const buildClient = ({ req }) => {
   if (typeof window === 'undefined') {
     // we are on the server
     return axios.create({
-      baseURL:
-        'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
-      // 'http://www.ticketingdotdev-app.xyz/',
-
+      baseURL: 'http://www.ticketingdotdev-app.xyz/',
+      //for dev use instead 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local'
       headers: req.headers,
     });
   } else {
